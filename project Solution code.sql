@@ -1,17 +1,18 @@
 -- Netflix Data Analysis using SQL
 -- Solutions of 15 business problems
 
---Business Problems and Solutions--
+## Business Problems and Solutions
 
---1Count the number of movies and Tv show
-
+## 1.Count the Number of Movies vs TV Shows
+```sql
 select type, Count(*) as Count_types 
 from netflix_1
 group by type
+```
+	**Objective:** Determine the distribution of content types on Netflix.
 
-
---2 find the most common rating for movies and tv shows
-
+### 2.find the most common rating for movies and tv shows
+```sql
 select 
 type,
 rating
@@ -24,7 +25,7 @@ FROM netflix_1
 group by type,rating
 ) as t1
 where Ranking=1
-
+```
 
 --3 list all movies released in a specific year(e.g,2020)--\
 select 
