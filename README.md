@@ -226,9 +226,7 @@ group by category
 **Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
 
 
-**Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
 
-category t as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
 
 ## Findings and Conclusion
 
@@ -240,4 +238,4 @@ category t as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Co
 This analysis provides a comprehensive view of Netflix's content and can help inform content strategy and decision-making.
 
 
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/muhammedshamilpp)
+- **LinkedIn**: [Muhammed shamil-linkedin ](https://www.linkedin.com/in/muhammedshamilpp)
