@@ -16,7 +16,8 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 ![Dataset](https://github.com/shamilshamuh/Netflix_sql_project/blob/main/netflix_titles.csv)
 
 ## Schema
-'''DROP TABLE IF EXISTS netflix;
+'''sql
+DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
 (
     show_id      VARCHAR(5),
@@ -31,4 +32,4 @@ CREATE TABLE netflix
     duration     VARCHAR(15),
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
-);'''
+);
