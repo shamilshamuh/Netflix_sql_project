@@ -1,13 +1,16 @@
---Business Problems and Solutions--
-select * from netflix_1
+-- Netflix Data Analysis using SQL
+-- Solutions of 15 business problems
 
-1. Count the number of movies vs tv shows
+--Business Problems and Solutions--
+
+--1Count the number of movies and Tv show
+
 select type, Count(*) as Count_types 
 from netflix_1
 group by type
 
 
-2.find the most common rating for movies and tv shows
+--2 find the most common rating for movies and tv shows
 
 select 
 type,
@@ -23,7 +26,7 @@ group by type,rating
 where Ranking=1
 
 
-3--list all movies released in a specific year(e.g,2020)--\
+--3 list all movies released in a specific year(e.g,2020)--\
 select 
 type,
 title,
@@ -33,7 +36,7 @@ netflix_1
 where release_year=2020 and type='Movie'
 
 
-4-- find the top 5 countries with the most content on netflix--
+--4 find the top 5 countries with the most content on netflix--
 select 
 trim(unnest(string_to_array(country,','))) as Top_5_country
 ,count(show_id) as total_content 
@@ -42,7 +45,7 @@ group by Top_5_country
 order by total_content desc
 limit 5
 
-5-- identify the longest movie
+--5 identify the longest movie
 select 
 *from
 (select distinct title as movie,
@@ -116,6 +119,8 @@ where director is null
 select type,casts
 from netflix_1
 where casts ilike'%Salman Khan%'
+  AND 
+	release_year > EXTRACT(YEAR FROM CURRENT_DATE) - 10
 
 
 --14 find the top 10 actors who as appeared in the highest number movies produced in india
