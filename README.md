@@ -33,7 +33,33 @@ CREATE TABLE netflix
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
 );
-``` 
+```
+## Business Problems and Solutions
+
+## 1.Count the Number of Movies vs TV Shows
+```sql
+select type, Count(*) as Count_types 
+from netflix_1
+group by type
+```
+	**Objective:** Determine the distribution of content types on Netflix.
+
+### 2.find the most common rating for movies and tv shows
+```sql
+select 
+type,
+rating
+
+from
+(
+select type,count(*), rating,
+rank() over(PARTITION BY type order by count(*) desc )as Ranking
+FROM netflix_1
+group by type,rating
+) as t1
+where Ranking=1
+```
+
 
 
 **Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
